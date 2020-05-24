@@ -117,3 +117,32 @@ body{
     }
   }
 }
+.posts{
+  margin-top: 40px;
+  &__header{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 16px;
+    &__title{
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+  @media screen and (max-width: 1024px) and (min-width: 640px){
+    .posts__header{
+      margin-bottom: 12px;
+    }
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 640px){
+  .posts{
+    margin-top: 32px;
+  }
+}
