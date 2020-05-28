@@ -1,18 +1,5 @@
 %body   
-  %header.header-pc
-    .header__top
-      .header__top__contents
-        インス映えするお店が探せるサイト
-
-    .header__contents
-      %a.header__logo
-        = image_tag('logo/logo-insupo.png', width: '110px', alt: 'ロゴ')
-      .header__nav
-        %a.header__nav__item
-          検索
-        %a.header__nav__item__btn
-          = link_to edit_user_path(current_user) do
-            新規登録
+  = render "shared/header"
   .main-top
     あなたのお気に入りのインスタスポットを投稿しよう!
   .main-contents.pt-40
@@ -29,5 +16,9 @@
           人気
       .posts__contents
         .posts__item
-%footer.footer
+          = link_to image_tag('test.jpg', class: 'posts__item__image', width: '160px', alt: 'ロゴ'), '#'
+          .posts__item__info
+            .posts__item__info__name
+              テスト
+                
   = render "shared/footer"

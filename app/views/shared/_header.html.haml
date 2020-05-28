@@ -1,0 +1,14 @@
+%header.header-pc
+  .header__top
+    .header__top__contents
+      インス映えするお店が探せるサイト
+
+    .header__contents
+      %a.header__logo
+        = image_tag('logo/logo-insupo.png', width: '110px', alt: 'ロゴ')
+      .header__nav
+        %a.header__nav__item
+          検索
+        %a.header__nav__item__btn
+          = link_to edit_user_path(current_user) do
+            新規登録
