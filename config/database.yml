@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: inspo_production
-  username: inspo
-  password: <%= ENV['INSPO_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
