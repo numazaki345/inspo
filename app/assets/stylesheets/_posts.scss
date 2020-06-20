@@ -24,6 +24,23 @@ body{
   width: 600px;
 }
 
+input[type="file" i] {
+  display: none;
+}
+
+.btn{
+	display: block;
+	width: 140px;
+	padding: 12px 0;
+	margin: 0 auto;
+	color: #ffffff;
+	text-align: center;
+	border: none;
+	border-radius: 6px;
+	background: pink;
+	cursor: pointer;
+}
+
 .form{
   padding: 32px;
   border-radius: 16px;
@@ -93,6 +110,37 @@ body{
 			color: #ffffff;
 			background-color: #FFCCCC;
 		}
+	}
+	&__item{
+	  margin-bottom: 32px;
+	  &__title{
+		display: flex;
+		align-items: center;
+		margin-bottom: 12px;
+		font-weight: bold;
+	  }
+	  &__text{
+		width: 100%;
+		padding: 12px;
+		border: 1px solid #eae6dc;
+		border-radius: 8px;
+		box-sizing: border-box;
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+	  }
+	  .btn--img{
+		display: inline-block;
+		padding: 10px 20px;
+		font-size: 14px;
+		border: 1px solid #eae6dc;
+		border-radius: 6px;
+		background: #ffffff;
+		cursor: pointer;
+	  }
+	  &__img--hidden{
+		display: none;
+	  }
 	}
 }
 
