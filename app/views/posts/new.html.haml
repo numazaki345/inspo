@@ -8,38 +8,39 @@
         入力
       .form__breadcrumb__item 確認
       .form__breadcrumb__item 完了
-    .form__item
-      .form__item__title
-        店名
-      %input.form__item__text{:placeholder =>"例) insupo 渋谷店",:autofocus =>"autofocus",:type =>"text",:name =>"micropost[name]",:id =>"micropost_name"}
-    .form__item
-      .form__item__title
-        エリア
-    .form__item
-      .form__item__title
-        写真
-      %div
-        %label.btn--img{:for =>"file_upload"}
-          %p
-            + 写真を選択
-          %input{:accept =>"image/jpeg,image/gif,image/png",:id =>"file_upload",:type =>"file",:name => "micropost[picture]"}
-      %img.form__item__img--hidden.form__item__img{:id =>"form__item__img--preview",:src =>"", :height =>"200"}
-      %input{:type => "hidden", :nmae => "micropost[picture_cahe]", :id => "micropost_picture_cache"}
-      %input{:accept =>"image/jpeg,image/gif,image/png",:id =>"file_upload",:type =>"file",:name => "micropost[picture]"}
+    %form{:class =>"micropost",:id =>"new_micropost",:enctype =>"multipart/form-data",:action =>"/new/confirm",:method =>"post"}
+      .form__item
+        .form__item__title
+          店名
+        %input.form__item__text{:placeholder =>"例) insupo 渋谷店",:autofocus =>"autofocus",:type =>"text",:name =>"micropost[name]",:id =>"micropost_name"}
+      .form__item
+        .form__item__title
+          エリア
+      .form__item
+        .form__item__title
+          写真
+        %div
+          %label.btn--img{:for =>"file_upload"}
+            %p
+              + 写真を選択
+            %input{:accept =>"image/jpeg,image/gif,image/png",:id =>"file_upload",:type =>"file",:name => "micropost[picture]"}
+        %img.form__item__img--hidden.form__item__img{:id =>"form__item__img--preview",:src =>"", :height =>"200"}
+        %input{:type => "hidden", :nmae => "micropost[picture_cahe]", :id => "micropost_picture_cache"}
+        %input{:accept =>"image/jpeg,image/gif,image/png",:id =>"file_upload",:type =>"file",:name => "micropost[picture]"}
 
-      %input{:type =>"file", :class =>"image_file", :id =>"#image01"}
-      %img{:id =>"image01"}
-    .form__item
-      .form__item__title
-        住所
-      %input.form__item__text{:placeholder =>"例) 東京都渋谷区渋谷1-2-3",:type =>"text",:name =>"micropost[address]",:id =>"micropost_address"}
-    .form__item
-      .form__item__title
-        電話番号
-      %input.form__item__text{:placeholder =>"例) 01-1234-5678",:type =>"text",:name =>"micropost[tel]",:id =>"micropost_tel"}
-    .form__item
-      .form__item__title
-        URL
-      %input.form__item__text{:placeholder =>"例) https://",:type =>"text",:name =>"micropost[URL]",:id =>"micropost_URL"}
-    %input{:type =>"submit", :name =>"commit", :value =>"確認に進む",:class =>"btn" }
+        %input{:type =>"file", :class =>"image_file", :id =>"#image01"}
+        %img{:id =>"image01"}
+      .form__item
+        .form__item__title
+          住所
+        %input.form__item__text{:placeholder =>"例) 東京都渋谷区渋谷1-2-3",:type =>"text",:name =>"micropost[address]",:id =>"micropost_address"}
+      .form__item
+        .form__item__title
+          電話番号
+        %input.form__item__text{:placeholder =>"例) 01-1234-5678",:type =>"text",:name =>"micropost[tel]",:id =>"micropost_tel"}
+      .form__item
+        .form__item__title
+          URL
+        %input.form__item__text{:placeholder =>"例) https://",:type =>"text",:name =>"micropost[URL]",:id =>"micropost_URL"}
+      %input{:type =>"submit", :name =>"commit", :value =>"確認に進む",:class =>"btn" }
 = render "shared/footer"
